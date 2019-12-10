@@ -1,0 +1,119 @@
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+#logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 3;
+  top: 60px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+#logo #vardas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  border: 4px solid red;
+  color: red;
+  padding-top: 5px;
+  padding-left: 15px;
+  background: white;
+}
+
+#logo #vardas #pirmas_vardas {
+  margin-right: 12px;
+  color: red;
+}
+
+#logo #vardas #pavarde {
+  color: red;
+}
+
+#logo #links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  border: 4px solid blue;
+  font-size: 22px;
+  font-weight: 600;
+  height: 51px;
+  padding: 2px 15px 2px 2px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  max-height: 75px;
+}
+
+#logo #links a {
+  margin: 10px;
+  margin-right: 0;
+  color: blue;
+}
+
+#logo #links a img {
+  height: 25px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  #galerija .img_text {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #logo {
+    margin-top: 30px;
+    top: 30px;
+  }
+  #logo #links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    margin: 0;
+  }
+  #logo {
+    top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  #logo #vardas {
+    font-size: 1.2em;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  #logo #links {
+    font-size: 1.2em;
+    padding-right: 5px;
+  }
+  #logo #links a {
+    margin: 5px;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=menu.css.map */
