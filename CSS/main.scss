@@ -91,7 +91,7 @@ a{
         transition: left 0.3s;
         }
 }
-@media only screen and (max-width: 1081px) {
+@media only screen and (max-width: 1281px) {
     .galerija{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }    
@@ -100,12 +100,12 @@ a{
     footer{
         height: 80px;
     }
-    .galerija{
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-    }
+    // .galerija{
+    //     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // }
 }
-@media only screen and (max-width: 361px) {
-    .galerija{
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    }
-}
+// @media only screen and (max-width: 361px) {
+//     .galerija{
+//         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+//     }
+// }
