@@ -1,25 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
 body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
     display: grid;
     grid-template-rows: min-content 1fr;
-    height: 100vh;
-    box-sizing: border-box;
-    margin:0;
-    padding: 0 10px 10px 10px;
-    overflow: hidden;
 }
-
-#logo{
+footer{
+    width: 100%;
+    height: 120px;
+    border-top: 1px solid black;
+    background-image: repeating-linear-gradient(-45deg, transparent 0 30px, black 1px 31px)
+}
+.logo{
     position: static;
 }
-
-#galerija{
+.wrapper{
+    padding: 8px;
+    overflow: hidden;
+}
+.galerija{
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+    height: 100%;
     width: 100%;
-    border: 2px solid;
-    overflow-y: scroll;
-    overflow-x: hidden;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
 }
 
 .galerija_box{
@@ -29,13 +40,11 @@ body{
     // padding: 10px;
     box-sizing: border-box;
     align-items: center;
-    border-bottom: 2px solid;
     box-sizing: content-box;
     overflow: hidden;
     scroll-snap-align: start;
 
     img{
-        max-height: calc(100% - 20px);
         width: 100%;
         object-fit: contain;
         flex: 2 1 0;
@@ -53,7 +62,10 @@ body{
     border:none;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 721px) {
+    footer{
+        height: 80px;
+    }
     body{
         padding: 0 5px 5px 5px;
     }
@@ -61,9 +73,8 @@ body{
     .galerija_box{
         flex-direction: column;
         padding: 0;
-        height: auto;
-
         img{
+            width: unset;
             flex: 1 1 0;
         }
 
@@ -75,7 +86,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 361px) {
    body{
        padding: 0;
    }

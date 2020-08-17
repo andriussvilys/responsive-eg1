@@ -5,40 +5,75 @@
   text-transform: uppercase;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr auto;
+      grid-template-rows: -webkit-min-content 1fr auto;
+      grid-template-rows: min-content 1fr auto;
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  border-top: 1px solid black;
+  background-image: repeating-linear-gradient(-45deg, transparent 0 30px, black 1px 31px);
+}
+
 a {
   text-decoration: none;
 }
 
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+  padding: 8px;
 }
 
-#galerija {
+.galerija-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#galerija .img_container {
-  width: 25%;
+.galerija {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+
+.galerija .img_container {
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
   overflow: hidden;
   position: relative;
 }
 
-#galerija .img_container:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-
-#galerija .content {
+.galerija .content {
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,14 +82,14 @@ body {
           align-items: center;
 }
 
-#galerija .img_text {
+.galerija .img_text {
   max-width: 99%;
-  font-size: 2em;
+  font-size: 3em;
   position: absolute;
   left: -100%;
 }
 
-#galerija a {
+.galerija a {
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -62,19 +97,19 @@ body {
   display: flex;
 }
 
-#galerija img {
+.galerija img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#galerija .img_container:hover img {
+.galerija .img_container:hover img {
   opacity: 0.3;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 
-#galerija .img_container:hover div {
+.galerija .img_container:hover div {
   opacity: 1;
   -webkit-transition: opacity 2s;
   transition: opacity 2s;
@@ -83,35 +118,27 @@ body {
   transition: left 0.3s;
 }
 
-@media only screen and (max-width: 768px) {
-  #galerija .img_text {
-    font-size: 1.2em;
+@media only screen and (max-width: 1081px) {
+  .galerija {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    margin-top: 30px;
+@media only screen and (max-width: 721px) {
+  footer {
+    height: 80px;
   }
-  #galerija div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-  }
-  #galerija .img_text {
-    font-size: 2em;
+  .galerija {
+    -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
 
-@media only screen and (max-width: 320px) {
-  body {
-    margin: 0;
-  }
-  #galerija div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-    max-width: 100%;
+@media only screen and (max-width: 361px) {
+  .galerija {
+    -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
 /*# sourceMappingURL=main.css.map */

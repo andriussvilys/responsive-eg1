@@ -3,101 +3,84 @@ a{
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
-
-#logo{
-    width:100%;
+.nav-wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.logo{
+    width: 100%;
     display:flex;
     flex-wrap: wrap;
-    position: sticky;
     z-index: 3;
-    top: 60px;
-    margin-bottom: 20px;
-    margin-top: 60px;
-
-    #vardas{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 2em;
-        flex: 1 1 0;
-        border:4px solid red;
+}
+.nav-item{
+    margin-top: 10px;
+}
+.vardas,.links{
+    padding: 0 10px 10px 10px;
+    flex: 1 1 0;
+    font-size: 2em;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    border: 4px solid;
+    background: white;
+    margin: 8px 8px 0 8px;
+}
+.vardas{
+    border-color:red;
+    .pirmas_vardas{
         color: red;
-        padding-top:5px;
-        padding-left: 15px;
-        background: white;
-
-        #pirmas_vardas{
-            margin-right: 12px;
-            color:red;
-        }
-        #pavarde{
-            color: red;
-        }
+        margin-right: 12px;
     }
-
-    #links{
-        flex: 1 1 0;
-        border:4px solid blue;
-        font-size:22px;
-        font-weight: 600;
-        height: 51px;
-        padding: 2px 15px 2px 2px;
-        background: white;
-        display:flex;
-        justify-content: end;
-        max-height: 75px;
-            a{
-            margin:10px;
-            margin-right: 0;
-            color: blue;
-                img {
-                    height: 25px;
-                    cursor: pointer;
-                }    
-        }
+    .pavarde{
+        color: red;
     }
 }
 
-@media only screen and (max-width: 768px) {
-    #galerija{
-            .img_text{
-                font-size: 1.2em;
-            }
+.links{
+    border-color:blue;
+    color: blue;
+    justify-content: space-between;
+}
+.socmedia{
+    order: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 30px;
+    max-width: 100%;
+    a{
+        width: 30px;
+        margin-right: 10px;
+        img{
+            height: 100%;
+        }
+    }
+    a:last-of-type{
+        margin-right: 0;
     }
 }
- @media only screen and (max-width: 480px) {
-     #logo{
-         margin-top: 30px;
-         top: 30px;
 
-         #links {
+ @media only screen and (max-width: 721px) {
+     .logo{
+
+         .links {
             justify-content: space-between;
         }
      }
  }
 
- @media only screen and (max-width: 320px) {
-    body{
-        margin: 0;
+ @media only screen and (max-width: 361px) {
+    .vardas,.links{
+        font-size: 1.2em;
+        max-width: unset;
     }
-
-    #logo{
-        top: 0;
-        margin-bottom: 0;
-        margin-top: 0;
-
-        #vardas{
-            font-size: 1.2em;
-            flex-wrap: nowrap;
-        }
-
-        #links {
-            font-size: 1.2em;
-            padding-right: 5px;
-        }
-
-        #links a {
-            margin:5px;
-            height: 20px;
+    .socmedia{
+        height: 20px;
+        a{
+            width: 20px;
         }
     }
    }
