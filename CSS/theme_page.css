@@ -86,9 +86,6 @@ footer {
   footer {
     height: 80px;
   }
-  body {
-    padding: 0 5px 5px 5px;
-  }
   .galerija_box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -107,12 +104,6 @@ footer {
         -ms-flex: 1 1 0px;
             flex: 1 1 0;
     width: auto;
-  }
-}
-
-@media only screen and (max-width: 361px) {
-  body {
-    padding: 0;
   }
 }
 /*# sourceMappingURL=theme_page.css.map */

@@ -13,6 +13,7 @@ html, body {
 body {
   overflow-x: hidden;
   margin: 0;
+  padding: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: min-content 1fr auto;
@@ -36,9 +37,9 @@ a {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: min-content 1fr;
-      grid-template-rows: -webkit-min-content 1fr;
-      grid-template-rows: min-content 1fr;
+  -ms-grid-rows: min-content 1fr min-content;
+      grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+      grid-template-rows: min-content 1fr min-content;
   padding: 8px;
 }
 
@@ -122,12 +123,6 @@ a {
   .galerija {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-}
-
-@media only screen and (max-width: 721px) {
-  footer {
-    height: 80px;
   }
 }
 /*# sourceMappingURL=main.css.map */

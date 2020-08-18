@@ -93,12 +93,14 @@ a {
 }
 
 .socmedia a {
+  height: 30px;
   width: 30px;
   margin-right: 10px;
 }
 
 .socmedia a img {
   height: 100%;
+  width: 100%;
 }
 
 .socmedia a:last-of-type {
@@ -123,6 +125,7 @@ a {
   }
   .socmedia a {
     width: 20px;
+    height: 20px;
   }
 }
 /*# sourceMappingURL=menu.css.map */
