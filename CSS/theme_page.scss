@@ -45,7 +45,7 @@ footer{
 .galerija-text{
     width: 20%;
     flex: 1 2 0;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 .galerija-image{
     height: 100%;
@@ -81,3 +81,17 @@ footer{
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 721px) {
+    .galerija_box{
+    height: unset;
+    min-height: 100%;
+    grid-template-rows: minmax(50vw,1fr) min-content;
+    scroll-snap-align: unset
+    }
+}
+
+
+
+
+
