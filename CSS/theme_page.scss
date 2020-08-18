@@ -37,29 +37,22 @@ footer{
     height: 100%;
     width: 100%;
     display: flex;
-    // padding: 10px;
-    box-sizing: border-box;
     align-items: center;
-    box-sizing: content-box;
     overflow: hidden;
     scroll-snap-align: start;
-
-    img{
-        width: 100%;
-        object-fit: contain;
-        flex: 2 1 0;
-    }
-
-    div{
-        width: 20%;
-        flex: 1 2 0;
-        padding: 0 20px;
-    }
-
 }
-
-.last_box{
-    border:none;
+.galerija-text{
+    width: 20%;
+    flex: 1 2 0;
+    padding: 0 20px;
+}
+.galerija-image{
+    height: 100%;
+    flex: 2 1 0;
+    overflow: hidden;
+    img{
+        height: 100%;
+    }
 }
 
 @media only screen and (max-width: 721px) {
@@ -70,15 +63,20 @@ footer{
     .galerija_box{
         flex-direction: column;
         padding: 0;
-        img{
-            width: unset;
-            flex: 1 1 0;
-        }
-
-        div{
-            flex: 1 1 0;
-            width: auto;
-            // overflow-y: scroll;
-        }
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr min-content;
+    }
+    .galerija-image, .galerija-text{
+        flex: unset;
+    }
+    .galerija-image{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    justify-content: center;
+    }
+    .galerija-text{
+        width: 100%;
     }
 }
