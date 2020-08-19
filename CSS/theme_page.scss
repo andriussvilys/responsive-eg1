@@ -41,6 +41,7 @@ footer{
     overflow: hidden;
     margin: 2px 0;
     scroll-snap-align: start;
+    font-size: 1.7em
 }
 .galerija-text{
     width: 20%;
@@ -70,6 +71,7 @@ footer{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 1fr min-content;
+        font-size: 1.2em;
     }
     .galerija-image, .galerija-text{
         flex: unset;
